@@ -1,30 +1,41 @@
 import { useState } from "react";
 import styles from "../../Styles/AddToDo/AddToDo.module.css";
-import useTodoStore from "../../zustand/Store";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "../../Redux/TodoSlice";
 
 export default function AddToDo() {
   const [title, setTitle] = useState("");
   const [shortDescription, setShortDescription] = useState("");
   const [date, setDate] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("پیشفرض");
   const [description, setDescription] = useState("");
-  const { todoArray, setTodoArray } = useTodoStore();
-  console.log(todoArray)
-
+  const dispatch = useDispatch();
   const categories = ["پیش فرض"];
-
+  const todoArray = useSelector((state: any) => state.todos.todoArray);
+  console.log(todoArray);
   const HandleAddToDo = () => {
-    let newToDo = {
-      id: Math.random(),
-      title: title,
-      shortDescription: shortDescription,
-      date: date,
-      category: category,
-      description: description,
-    };
-    let copyOfTodoes = [...todoArray];
-    copyOfTodoes.push(newToDo);
-    setTodoArray(copyOfTodoes);
+    if (
+      title != "" &&
+      shortDescription != "" &&
+      category != "" &&
+      date != "" &&
+      description != ""
+    ) {
+      const newTodo = {
+        id: Math.random(),
+        title: title,
+        shortDescription: shortDescription,
+        date: date,
+        category: category,
+        description: description,
+      };
+      dispatch(addTodo(newTodo));
+      setTitle("");
+      setShortDescription("");
+      setDate("");
+      setCategory("");
+      setDescription("");
+    }
   };
   return (
     <main className={styles.container}>

@@ -127,8 +127,9 @@
   height: 53.13px;
 }
 .inputContainer3 input {
+  padding-left: 17.57px;
   padding-right: 17.57px;
-  width: calc(100% - 17.57px);
+  width: calc(100% - 35.14px);
   height: 100%;
   background-color: var(--blue1);
 

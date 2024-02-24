@@ -6,7 +6,6 @@
     display: flex;
     justify-content: flex-end;
     gap: 84px;
-    background-color: red;
   }
   .title {
     font-size: 32px;
@@ -18,12 +17,10 @@
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    background-color: blue;
   }
   .inputContainer {
     width: 396px;
     height: 53.13px;
-    background-color: red;
   }
   .inputContainer input {
     padding-right: 23px;
@@ -59,7 +56,7 @@
   .table{
     margin-top: 10px;
     width: 100%;
-    height: 348px;
+    height: 300px;
     font-family: "Vazir";
-    background-color: purple;
   }
+ 
