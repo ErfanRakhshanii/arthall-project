@@ -1,10 +1,10 @@
 // Layout.js
-import React, { ReactNode } from 'react';
-import Header from './components/Header/Header';
+import React, { ReactNode } from "react";
+import Header from "./components/Header/Header";
 interface LayoutProps {
-    children: ReactNode; 
-  }
-const Layout = ({ children } : any) => {
+  children: ReactNode;
+}
+const Layout = ({ children }: any) => {
   return (
     <div>
       <Header />

@@ -53,7 +53,7 @@ export default function List() {
                 borderBottom: isActive ? "1px solid #F1C400" : "white",
                 height: "60%",
                 textDecoration: "none",
-                color: "white"
+                color: "white",
               })}
             >
               {item.routeName}
@@ -65,7 +65,10 @@ export default function List() {
           <img src={search} alt="Search" />
         </div>
         <div className={styles.table} dir="rtl">
-          <TableContainer component={Paper} sx={{ display: "flex",background:'red' }}>
+          <TableContainer
+            component={Paper}
+            sx={{ display: "flex", background: "red" }}
+          >
             <Table sx={{}}>
               <TableHead
                 sx={{
@@ -74,8 +77,8 @@ export default function List() {
                   color: "white",
                 }}
               >
-                <TableRow >
-                  <TableCell padding="checkbox" >
+                <TableRow>
+                  <TableCell padding="checkbox">
                     <Checkbox
                       style={{
                         color: "white",
@@ -85,8 +88,7 @@ export default function List() {
                   {tableHeader.map((header, index) => (
                     <TableCell
                       key={index}
-                      style={{ fontFamily: "none", color: "white" ,
-}}  
+                      style={{ fontFamily: "none", color: "white" }}
                     >
                       {header}
                     </TableCell>
@@ -112,7 +114,10 @@ export default function List() {
                     shortDescription: string;
                     date: string;
                   }) => (
-                    <TableRow key={row.id} sx={{borderTop: '10px solid var(--blue0)'}}>
+                    <TableRow
+                      key={row.id}
+                      sx={{ borderTop: "10px solid var(--blue0)" }}
+                    >
                       <TableCell padding="checkbox">
                         <Checkbox
                           style={{
@@ -137,8 +142,8 @@ export default function List() {
           </TableContainer>
         </div>
         <TablePagination
-        dir="ltr"
-          sx={{ display: "flex" , color: "white" , justifyContent:'flex-end' }}
+          dir="ltr"
+          sx={{ display: "flex", color: "white", justifyContent: "flex-end" }}
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={todoArray.length}
