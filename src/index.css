@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("assets/fonts/VazirMedium.ttf") format("truetype");
+}
+:root {
+  --blue0: #0d929a;
+  --blue1: #31A2A9;
+  --orange0: #F1C400;
+}
+body {
+  direction: rtl;
+  margin: 0;
+  max-width: 1440px;
+  background-color: var(--blue0);
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Vazir";
+}
